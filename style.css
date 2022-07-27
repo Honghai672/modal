@@ -1,0 +1,118 @@
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --base-color: #e26e70;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.Btn {
+    padding: 2rem 4rem;
+    font-size: 2rem;
+    font-weight: 500;
+    border-radius: 0.7rem;
+    outline: none;
+    border: unset;
+    background: #fff;
+    box-shadow: 2px 1px #fff;
+    cursor: pointer;
+}
+
+.modal {
+    background: rgb(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+
+}
+
+.modal__inner {
+    width: 40rem;
+    position: relative;
+    top: 28%;
+    margin: auto;
+    background: #fff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    animation: ShowModal 0.2s linear;
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background: var(--base-color);
+    color: #fff;
+}
+
+.modal__header p {
+    font-size: 1.6rem;
+}
+
+
+.modal__header i {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.modal__body {
+    padding: 1.3rem;
+}
+
+.modal__body h3 {
+    font-size: 2.5rem;
+    color: var(--base-color);
+}
+
+.modal__body p {
+    font-size: 1.7rem;
+}
+
+.modal__footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.5rem;
+}
+
+.modal__footer button {
+    font-size: 1.5rem;
+    color: #fff;
+    background: var(--base-color);
+    border-radius: 0.5rem;
+    padding: 0.9rem 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes ShowModal {
+    from {
+        top: -200px;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        top: 28%;
+    }
+}
